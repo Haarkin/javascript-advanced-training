@@ -1,0 +1,22 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "book app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haarkin/javascript-advanced-training.git"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Haarkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haarkin/javascript-advanced-training/issues"
+  },
+  "homepage": "https://github.com/Haarkin/javascript-advanced-training#readme"
+}
