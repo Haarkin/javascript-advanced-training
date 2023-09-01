@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "book app",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server",
+    "build": "rollup -c --watch"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/Haarkin/javascript-advanced-training/issues"
   },
-  "homepage": "https://github.com/Haarkin/javascript-advanced-training#readme"
+  "homepage": "https://github.com/Haarkin/javascript-advanced-training#readme",
+  "dependencies": {
+    "on-change": "^4.0.2",
+    "rollup": "^3.28.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "eslint": "^8.48.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.0.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "rollup-plugin-import-css": "^3.3.1"
+  }
 }
