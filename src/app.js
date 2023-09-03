@@ -1,8 +1,8 @@
-import { MainView } from './views/main'
+import { MainView } from './views/main/main'
 
 class App {
   routes = [
-    { path: '', view: MainView }
+    { path: "", view: MainView }
   ]
 
   appState = {
@@ -10,17 +10,17 @@ class App {
   }
 
   constructor () {
-    window.addEventListener('hashchange', this.route.bind(this))
-    this.route()
+    window.addEventListener('hashchange', this.route.bind(this));
+    this.route();
   }
 
   route () {
     if (this.currentView) {
       this.currentView.destroy()
     }
-    const view = this.routes.find(r => r.path == location.hash).view
-    this.currentView = new view(this.appState)
-    this.currentView.render()
+    const view = this.routes.find(r => r.path == location.hash).view;
+    this.currentView = new view(this.appState);
+    this.currentView.render();
   }
 }
 
