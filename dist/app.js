@@ -1044,7 +1044,7 @@
                     <img src="/static/search.svg" alt="Search icon" />
                     Поиск книг
                 </a>
-                <a class="menu__item" href="#">
+                <a class="menu__item" href="#favorites">
                     <img src="/static/favorites.svg" alt="Favorite icon" />
                     Избранное
                     <div class="menu__counter">
@@ -1052,6 +1052,30 @@
                     </div>
                 </a>
             </div>
+        `;
+          return this.el;
+      }
+  }
+
+  class Search extends DivComponent {
+      constructor(state) {
+          super();
+          this.state = state;
+      }
+
+      render() {
+          this.el.classList.add("search");
+          this.el.innerHTML = `
+            <div class="search__wrapper">
+                <input 
+                    type="text" 
+                    placeholder="Найти книгу или автора...." 
+                    class="search__input"
+                    value="${this.state.searchQuery ? this.state.searchQuery : ''}"
+                />
+                <img src="/static/search.svg" alt="Search icon" />
+            </div>
+            <button aria-label="Искать"><img src="/static/search-white.svg" alt="Search button icon" /></button>
         `;
           return this.el;
       }
@@ -1086,6 +1110,7 @@
 
     render() {
       const main = document.createElement('div');
+      main.append(new Search(this.state).render());
       this.app.innerHTML = '';
       this.app.append(main);
       this.renderHeader();
