@@ -1,0 +1,11 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button {
+    position: relative;
+    border: none;
+    background: none;
+}
